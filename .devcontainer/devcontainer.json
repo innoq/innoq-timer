@@ -15,15 +15,8 @@
 				"vitest.explorer",
 				"esbenp.prettier-vscode",
 				"EditorConfig.EditorConfig",
-				"github.vscode-github-actions",
 				"DavidAnson.vscode-markdownlint",
-				"bierner.markdown-mermaid",
-				"vscjava.vscode-spring-initializr",
-				"fwcd.kotlin",
-				"vscjava.vscode-java-debug",
-				"redhat.java",
-				"vscjava.vscode-spring-boot-dashboard",
-				"vmware.vscode-boot-dev-pack"
+				"bierner.markdown-mermaid"
 			]
 		}
 	},
@@ -37,17 +30,15 @@
 	// "features": {},
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
-	// "forwardPorts": [],
+	"forwardPorts": [],
 
 	//"containerEnv": {
-		// Damit claude den API-Token erkennt und nutzt, müssen wir einen Workaround benutzen. 
-		// Sonst landet man immer im Login Screen und soll sich über den Browser Authentifizieren.
-		// Siehe: https://github.com/anthropics/claude-code/issues/1084#issuecomment-3063741722
-		//"ANTHROPIC_AUTH_TOKEN": "1234"
+		//"ANTHROPIC_API_KEY": "1234"
 	//},
-	"onCreateCommand": "npm install -g @anthropic-ai/claude-code && ./scripts/install-sdks.sh",
+	"onCreateCommand": "npm install -g @anthropic-ai/claude-code",
 	// Use 'postCreateCommand' to run commands after the container is created.
 	"postCreateCommand": "npm ci"
+
 
 	// Configure tool-specific properties.
 	// "customizations": {},

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>INNOQ Timer</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <div id="app">
+      <header class="timer__header">
+        <img class="timer__logo" src="/innoq-logo.svg" alt="INNOQ Logo" />
+      </header>
+      
+      <main class="timer__main">
+        <section class="timer__input-section">
+          <div class="timer__input-group">
+            <label for="time-input" class="timer__label">Pause Bis</label>
+            <div class="timer__time-picker">
+              <input 
+                type="text" 
+                id="hour-input" 
+                class="timer__time-input"
+                placeholder="HH"
+                maxlength="2"
+                pattern="[0-9]{1,2}"
+              />
+              <span class="timer__time-separator">:</span>
+              <input 
+                type="text" 
+                id="minute-input" 
+                class="timer__time-input"
+                placeholder="MM"
+                maxlength="2"
+                pattern="[0-9]{1,2}"
+              />
+            </div>
+          </div>
+          
+          <button id="start-btn" class="timer__button timer__button--start">
+            Start Timer
+          </button>
+        </section>
+        
+        <section class="timer__display-section">
+          <h2 class="timer__countdown-title">Pause Bis <span id="countdown-target-time"></span></h2>
+          <div id="timer-display" class="timer__display">
+            00:00
+          </div>
+          
+          <div id="timer-controls" class="timer__controls timer__controls--hidden">
+            <button id="stop-btn" class="timer__button timer__button--stop">
+              Stop
+            </button>
+          </div>
+          
+          <button id="reset-btn" class="timer__button timer__button--reset timer__button--hidden">
+            Reset Timer
+          </button>
+        </section>
+      </main>
+    </div>
+    
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
